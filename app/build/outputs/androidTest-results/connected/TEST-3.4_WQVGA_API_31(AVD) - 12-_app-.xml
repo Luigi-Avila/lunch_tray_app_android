@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="com.example.lunchtray.OrderFunctionalityTests" tests="10" failures="8" errors="0" skipped="0" time="39.827" timestamp="2022-07-18T22:12:16" hostname="localhost">
+  <properties>
+    <property name="device" value="3.4_WQVGA_API_31(AVD) - 12" />
+    <property name="flavor" value="" />
+    <property name="project" value=":app" />
+  </properties>
+  <testcase name="radio_buttons_update_side_menu_subtotal" classname="com.example.lunchtray.OrderFunctionalityTests" time="5.445">
+    <failure>androidx.test.espresso.base.DefaultFailureHandler$AssertionFailedWithCauseError: 'an instance of android.widget.TextView and view.getText() with or without transformation to match: a string containing "Subtotal: $3.00"' doesn't match the selected view.
+Expected: an instance of android.widget.TextView and view.getText() with or without transformation to match: a string containing "Subtotal: $3.00"
+Got: view.getText() was "Subtotal: $5.50"
+View Details: TextView{id=2131231217, res-name=subtotal, visibility=VISIBLE, width=97, height=19, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams&#64;a48cbdd, tag=null, root-is-layout-requested=false, has-input-connection=false, x=131.0, y=319.0, text=Subtotal: $5.50, input-type=0, ime-target=false, has-links=false}
+
+at dalvik.system.VMStack.getThreadStackTrace(Native Method)
+at java.lang.Thread.getStackTrace(Thread.java:1724)
+at androidx.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:12)
+at androidx.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:7)
+at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:5)
+at androidx.test.espresso.ViewInteraction.check(ViewInteraction.java:12)
+at com.example.lunchtray.OrderFunctionalityTests.radio_buttons_update_side_menu_subtotal(OrderFunctionalityTests.kt:89)
+... 27 trimmed
+Caused by: junit.framework.AssertionFailedError: 'an instance of android.widget.TextView and view.getText() with or without transformation to match: a string containing "Subtotal: $3.00"' doesn't match the selected view.
+Expected: an instance of android.widget.TextView and view.getText() with or without transformation to match: a string containing "Subtotal: $3.00"
+Got: view.getText() was "Subtotal: $5.50"
+View Details: TextView{id=2131231217, res-name=subtotal, visibility=VISIBLE, width=97, height=19, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams&#64;a48cbdd, tag=null, root-is-layout-requested=false, has-input-connection=false, x=131.0, y=319.0, text=Subtotal: $5.50, input-type=0, ime-target=false, has-links=false}
+
+at androidx.test.espresso.matcher.ViewMatchers.assertThat(ViewMatchers.java:16)
+at androidx.test.espresso.assertion.ViewAssertions$MatchesViewAssertion.check(ViewAssertions.java:11)
+at androidx.test.espresso.ViewInteraction$SingleExecutionViewAssertion.check(ViewInteraction.java:2)
+at androidx.test.espresso.ViewInteraction$2.call(ViewInteraction.java:12)
+at androidx.test.espresso.ViewInteraction$2.call(ViewInteraction.java:1)
+at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+at android.os.Handler.handleCallback(Handler.java:938)
+at android.os.Handler.dispatchMessage(Handler.java:99)
+at android.os.Looper.loopOnce(Looper.java:201)
+at android.os.Looper.loop(Looper.java:288)
+at android.app.ActivityThread.main(ActivityThread.java:7839)
+at java.lang.reflect.Method.invoke(Native Method)
+at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1003)</failure>
+  </testcase>
+  <testcase name="order_reset_after_cancel_from_accompaniment_menu" classname="com.example.lunchtray.OrderFunctionalityTests" time="3.562">
+    <failure>androidx.test.espresso.PerformException: Error performing 'single click' on view 'Animations or transitions are enabled on the target device.
+For more info check: https://developer.android.com/training/testing/espresso/setup#set-up-environment
+
+view.getId() is &lt;2131231081/com.example.lunchtray:id/next_button&gt;'.
+at androidx.test.espresso.PerformException$Builder.build(PerformException.java:1)
+at androidx.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:9)
+at androidx.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:7)
+at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:8)
+at androidx.test.espresso.ViewInteraction.desugaredPerform(ViewInteraction.java:11)
+at androidx.test.espresso.ViewInteraction.perform(ViewInteraction.java:4)
+at com.example.lunchtray.OrderFunctionalityTests.order_reset_after_cancel_from_accompaniment_menu(OrderFunctionalityTests.kt:236)
+... 27 trimmed
+Caused by: java.lang.RuntimeException: Action will not be performed because the target view does not match one or more of the following constraints:
+(view has effective visibility &lt;VISIBLE&gt; and view.getGlobalVisibleRect() covers at least &lt;90&gt; percent of the view's area)
+Target view: "MaterialButton{id=2131231081, res-name=next_button, visibility=VISIBLE, width=102, height=36, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams&#64;1373768, tag=null, root-is-layout-requested=false, has-input-connection=false, x=126.0, y=437.0, text=Next, input-type=0, ime-target=false, has-links=false, is-checked=false}"
+at androidx.test.espresso.ViewInteraction.doPerform(ViewInteraction.java:20)
+at androidx.test.espresso.ViewInteraction.access$100(ViewInteraction.java:1)
+at androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:2)
+at androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:1)
+at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+at android.os.Handler.handleCallback(Handler.java:938)
+at android.os.Handler.dispatchMessage(Handler.java:99)
+at android.os.Looper.loopOnce(Looper.java:201)
+at android.os.Looper.loop(Looper.java:288)
+at android.app.ActivityThread.main(ActivityThread.java:7839)
+at java.lang.reflect.Method.invoke(Native Method)
+at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1003)</failure>
+  </testcase>
+  <testcase name="subtotal_updates_in_full_order_flow" classname="com.example.lunchtray.OrderFunctionalityTests" time="2.693">
+    <failure>androidx.test.espresso.PerformException: Error performing 'single click' on view 'Animations or transitions are enabled on the target device.
+For more info check: https://developer.android.com/training/testing/espresso/setup#set-up-environment
+
+view.getId() is &lt;2131231081/com.example.lunchtray:id/next_button&gt;'.
+at androidx.test.espresso.PerformException$Builder.build(PerformException.java:1)
+at androidx.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:9)
+at androidx.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:7)
+at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:8)
+at androidx.test.espresso.ViewInteraction.desugaredPerform(ViewInteraction.java:11)
+at androidx.test.espresso.ViewInteraction.perform(ViewInteraction.java:4)
+at com.example.lunchtray.OrderFunctionalityTests.subtotal_updates_in_full_order_flow(OrderFunctionalityTests.kt:143)
+... 27 trimmed
+Caused by: java.lang.RuntimeException: Action will not be performed because the target view does not match one or more of the following constraints:
+(view has effective visibility &lt;VISIBLE&gt; and view.getGlobalVisibleRect() covers at least &lt;90&gt; percent of the view's area)
+Target view: "MaterialButton{id=2131231081, res-name=next_button, visibility=VISIBLE, width=102, height=36, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams&#64;2104d62, tag=null, root-is-layout-requested=false, has-input-connection=false, x=126.0, y=437.0, text=Next, input-type=0, ime-target=false, has-links=false, is-checked=false}"
+at androidx.test.espresso.ViewInteraction.doPerform(ViewInteraction.java:20)
+at androidx.test.espresso.ViewInteraction.access$100(ViewInteraction.java:1)
+at androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:2)
+at androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:1)
+at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+at android.os.Handler.handleCallback(Handler.java:938)
+at android.os.Handler.dispatchMessage(Handler.java:99)
+at android.os.Looper.loopOnce(Looper.java:201)
+at android.os.Looper.loop(Looper.java:288)
+at android.app.ActivityThread.main(ActivityThread.java:7839)
+at java.lang.reflect.Method.invoke(Native Method)
+at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1003)</failure>
+  </testcase>
+  <testcase name="order_snackbar" classname="com.example.lunchtray.OrderFunctionalityTests" time="2.655">
+    <failure>androidx.test.espresso.PerformException: Error performing 'single click' on view 'Animations or transitions are enabled on the target device.
+For more info check: https://developer.android.com/training/testing/espresso/setup#set-up-environment
+
+view.getId() is &lt;2131231081/com.example.lunchtray:id/next_button&gt;'.
+at androidx.test.espresso.PerformException$Builder.build(PerformException.java:1)
+at androidx.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:9)
+at androidx.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:7)
+at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:8)
+at androidx.test.espresso.ViewInteraction.desugaredPerform(ViewInteraction.java:11)
+at androidx.test.espresso.ViewInteraction.perform(ViewInteraction.java:4)
+at com.example.lunchtray.BaseTest.fullOrderFlow(BaseTest.kt:33)
+at com.example.lunchtray.OrderFunctionalityTests.order_snackbar(OrderFunctionalityTests.kt:272)
+... 27 trimmed
+Caused by: java.lang.RuntimeException: Action will not be performed because the target view does not match one or more of the following constraints:
+(view has effective visibility &lt;VISIBLE&gt; and view.getGlobalVisibleRect() covers at least &lt;90&gt; percent of the view's area)
+Target view: "MaterialButton{id=2131231081, res-name=next_button, visibility=VISIBLE, width=102, height=36, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams&#64;5086a0c, tag=null, root-is-layout-requested=false, has-input-connection=false, x=126.0, y=437.0, text=Next, input-type=0, ime-target=false, has-links=false, is-checked=false}"
+at androidx.test.espresso.ViewInteraction.doPerform(ViewInteraction.java:20)
+at androidx.test.espresso.ViewInteraction.access$100(ViewInteraction.java:1)
+at androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:2)
+at androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:1)
+at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+at android.os.Handler.handleCallback(Handler.java:938)
+at android.os.Handler.dispatchMessage(Handler.java:99)
+at android.os.Looper.loopOnce(Looper.java:201)
+at android.os.Looper.loop(Looper.java:288)
+at android.app.ActivityThread.main(ActivityThread.java:7839)
+at java.lang.reflect.Method.invoke(Native Method)
+at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1003)</failure>
+  </testcase>
+  <testcase name="order_reset_after_cancel_from_entree_menu" classname="com.example.lunchtray.OrderFunctionalityTests" time="2.284">
+    <failure>androidx.test.espresso.PerformException: Error performing 'single click' on view 'Animations or transitions are enabled on the target device.
+For more info check: https://developer.android.com/training/testing/espresso/setup#set-up-environment
+
+view.getId() is &lt;2131230842/com.example.lunchtray:id/cancel_button&gt;'.
+at androidx.test.espresso.PerformException$Builder.build(PerformException.java:1)
+at androidx.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:9)
+at androidx.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:7)
+at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:8)
+at androidx.test.espresso.ViewInteraction.desugaredPerform(ViewInteraction.java:11)
+at androidx.test.espresso.ViewInteraction.perform(ViewInteraction.java:4)
+at com.example.lunchtray.OrderFunctionalityTests.order_reset_after_cancel_from_entree_menu(OrderFunctionalityTests.kt:194)
+... 27 trimmed
+Caused by: java.lang.RuntimeException: Action will not be performed because the target view does not match one or more of the following constraints:
+(view has effective visibility &lt;VISIBLE&gt; and view.getGlobalVisibleRect() covers at least &lt;90&gt; percent of the view's area)
+Target view: "MaterialButton{id=2131230842, res-name=cancel_button, visibility=VISIBLE, width=102, height=36, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams&#64;a159241, tag=null, root-is-layout-requested=false, has-input-connection=false, x=12.0, y=437.0, text=Cancel, input-type=0, ime-target=false, has-links=false, is-checked=false}"
+at androidx.test.espresso.ViewInteraction.doPerform(ViewInteraction.java:20)
+at androidx.test.espresso.ViewInteraction.access$100(ViewInteraction.java:1)
+at androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:2)
+at androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:1)
+at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+at android.os.Handler.handleCallback(Handler.java:938)
+at android.os.Handler.dispatchMessage(Handler.java:99)
+at android.os.Looper.loopOnce(Looper.java:201)
+at android.os.Looper.loop(Looper.java:288)
+at android.app.ActivityThread.main(ActivityThread.java:7839)
+at java.lang.reflect.Method.invoke(Native Method)
+at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1003)</failure>
+  </testcase>
+  <testcase name="subtotal_tax_total_in_checkout" classname="com.example.lunchtray.OrderFunctionalityTests" time="2.539">
+    <failure>androidx.test.espresso.PerformException: Error performing 'single click' on view 'Animations or transitions are enabled on the target device.
+For more info check: https://developer.android.com/training/testing/espresso/setup#set-up-environment
+
+view.getId() is &lt;2131231081/com.example.lunchtray:id/next_button&gt;'.
+at androidx.test.espresso.PerformException$Builder.build(PerformException.java:1)
+at androidx.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:9)
+at androidx.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:7)
+at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:8)
+at androidx.test.espresso.ViewInteraction.desugaredPerform(ViewInteraction.java:11)
+at androidx.test.espresso.ViewInteraction.perform(ViewInteraction.java:4)
+at com.example.lunchtray.BaseTest.fullOrderFlow(BaseTest.kt:33)
+at com.example.lunchtray.OrderFunctionalityTests.subtotal_tax_total_in_checkout(OrderFunctionalityTests.kt:169)
+... 27 trimmed
+Caused by: java.lang.RuntimeException: Action will not be performed because the target view does not match one or more of the following constraints:
+(view has effective visibility &lt;VISIBLE&gt; and view.getGlobalVisibleRect() covers at least &lt;90&gt; percent of the view's area)
+Target view: "MaterialButton{id=2131231081, res-name=next_button, visibility=VISIBLE, width=102, height=36, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams&#64;7281d22, tag=null, root-is-layout-requested=false, has-input-connection=false, x=126.0, y=437.0, text=Next, input-type=0, ime-target=false, has-links=false, is-checked=false}"
+at androidx.test.espresso.ViewInteraction.doPerform(ViewInteraction.java:20)
+at androidx.test.espresso.ViewInteraction.access$100(ViewInteraction.java:1)
+at androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:2)
+at androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:1)
+at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+at android.os.Handler.handleCallback(Handler.java:938)
+at android.os.Handler.dispatchMessage(Handler.java:99)
+at android.os.Looper.loopOnce(Looper.java:201)
+at android.os.Looper.loop(Looper.java:288)
+at android.app.ActivityThread.main(ActivityThread.java:7839)
+at java.lang.reflect.Method.invoke(Native Method)
+at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1003)</failure>
+  </testcase>
+  <testcase name="radio_buttons_update_accompaniment_menu_subtotal" classname="com.example.lunchtray.OrderFunctionalityTests" time="3.039" />
+  <testcase name="order_reset_after_cancel_from_side_menu" classname="com.example.lunchtray.OrderFunctionalityTests" time="2.206">
+    <failure>androidx.test.espresso.PerformException: Error performing 'single click' on view 'Animations or transitions are enabled on the target device.
+For more info check: https://developer.android.com/training/testing/espresso/setup#set-up-environment
+
+view.getId() is &lt;2131231081/com.example.lunchtray:id/next_button&gt;'.
+at androidx.test.espresso.PerformException$Builder.build(PerformException.java:1)
+at androidx.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:9)
+at androidx.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:7)
+at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:8)
+at androidx.test.espresso.ViewInteraction.desugaredPerform(ViewInteraction.java:11)
+at androidx.test.espresso.ViewInteraction.perform(ViewInteraction.java:4)
+at com.example.lunchtray.OrderFunctionalityTests.order_reset_after_cancel_from_side_menu(OrderFunctionalityTests.kt:213)
+... 27 trimmed
+Caused by: java.lang.RuntimeException: Action will not be performed because the target view does not match one or more of the following constraints:
+(view has effective visibility &lt;VISIBLE&gt; and view.getGlobalVisibleRect() covers at least &lt;90&gt; percent of the view's area)
+Target view: "MaterialButton{id=2131231081, res-name=next_button, visibility=VISIBLE, width=102, height=36, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams&#64;7758618, tag=null, root-is-layout-requested=false, has-input-connection=false, x=126.0, y=437.0, text=Next, input-type=0, ime-target=false, has-links=false, is-checked=false}"
+at androidx.test.espresso.ViewInteraction.doPerform(ViewInteraction.java:20)
+at androidx.test.espresso.ViewInteraction.access$100(ViewInteraction.java:1)
+at androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:2)
+at androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:1)
+at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+at android.os.Handler.handleCallback(Handler.java:938)
+at android.os.Handler.dispatchMessage(Handler.java:99)
+at android.os.Looper.loopOnce(Looper.java:201)
+at android.os.Looper.loop(Looper.java:288)
+at android.app.ActivityThread.main(ActivityThread.java:7839)
+at java.lang.reflect.Method.invoke(Native Method)
+at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1003)</failure>
+  </testcase>
+  <testcase name="radio_buttons_update_entree_menu_subtotal" classname="com.example.lunchtray.OrderFunctionalityTests" time="4.129" />
+  <testcase name="order_reset_after_cancel_from_checkout" classname="com.example.lunchtray.OrderFunctionalityTests" time="2.831">
+    <failure>androidx.test.espresso.PerformException: Error performing 'single click' on view 'Animations or transitions are enabled on the target device.
+For more info check: https://developer.android.com/training/testing/espresso/setup#set-up-environment
+
+view.getId() is &lt;2131231081/com.example.lunchtray:id/next_button&gt;'.
+at androidx.test.espresso.PerformException$Builder.build(PerformException.java:1)
+at androidx.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:9)
+at androidx.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:7)
+at androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:8)
+at androidx.test.espresso.ViewInteraction.desugaredPerform(ViewInteraction.java:11)
+at androidx.test.espresso.ViewInteraction.perform(ViewInteraction.java:4)
+at com.example.lunchtray.BaseTest.fullOrderFlow(BaseTest.kt:33)
+at com.example.lunchtray.OrderFunctionalityTests.order_reset_after_cancel_from_checkout(OrderFunctionalityTests.kt:257)
+... 27 trimmed
+Caused by: java.lang.RuntimeException: Action will not be performed because the target view does not match one or more of the following constraints:
+(view has effective visibility &lt;VISIBLE&gt; and view.getGlobalVisibleRect() covers at least &lt;90&gt; percent of the view's area)
+Target view: "MaterialButton{id=2131231081, res-name=next_button, visibility=VISIBLE, width=102, height=36, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.constraintlayout.widget.ConstraintLayout$LayoutParams&#64;f8c5fb0, tag=null, root-is-layout-requested=false, has-input-connection=false, x=126.0, y=437.0, text=Next, input-type=0, ime-target=false, has-links=false, is-checked=false}"
+at androidx.test.espresso.ViewInteraction.doPerform(ViewInteraction.java:20)
+at androidx.test.espresso.ViewInteraction.access$100(ViewInteraction.java:1)
+at androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:2)
+at androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:1)
+at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+at android.os.Handler.handleCallback(Handler.java:938)
+at android.os.Handler.dispatchMessage(Handler.java:99)
+at android.os.Looper.loopOnce(Looper.java:201)
+at android.os.Looper.loop(Looper.java:288)
+at android.app.ActivityThread.main(ActivityThread.java:7839)
+at java.lang.reflect.Method.invoke(Native Method)
+at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1003)</failure>
+  </testcase>
+</testsuite>
